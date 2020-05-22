@@ -1,0 +1,31 @@
+打包文件关键字
+runtime: 不带编译器的版本
+common： commonjs打包规范来自node.js, require, exports 用于后端，同步的，老旧版本的打包器
+esm: es module, import export
+amd: requirejs, 专用于浏览器
+umd: universal module definition
+
+文件结构
+dist --打包发布文件
+examples
+flow --声明文件 （接口，属性）
+packages --特殊包文件
+...vue-server-renderer --服务器渲染模块
+...vue-template-compoiler --template模板渲染
+...weex-template-compiler --移动端
+...weex-vue-framework
+scripts
+src  --主要代码部分
+test
+types
+
+调试环境
+1.安装依赖 npm install
+2.安装rollup npm i -g rollup
+3.修改dev脚本
+"dev": "rollup -w -c scripts/config.js --sourcemap --environment TARGET:web-full-dev"
+4.执行开发命令 npm run dev
+
+
+入口文件：
+vue\src\platforms\web\entry-runtime-with-compiler.js
