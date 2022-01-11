@@ -79,7 +79,6 @@ Vue.prototype.$mount = function (
       }
     }
   }
-  // 挂载： 生成vdom, 生成dom, 追加到el
   return mount.call(this, el, hydrating)
 }
 

@@ -35,7 +35,6 @@ var filters = {
 }
 
 // app Vue instance
-// eslint-disable-next-line no-undef
 var app = new Vue({
   // app initial state
   data: {
